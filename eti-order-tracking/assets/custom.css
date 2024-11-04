@@ -1,0 +1,659 @@
+#trackOrderMap {
+    min-height: 400px;
+}
+
+.mdl-grid {
+    max-width: 1024px;
+    margin: auto;
+}
+
+.mdl-layout__header-row {
+    padding: 0;
+}
+
+.quickstart-user-details-container {
+    margin-top: 20px;
+    line-height: 25px;
+}
+
+#quickstart-sign-in-status {
+    font-weight: bold;
+}
+
+pre {
+    overflow-x: scroll;
+    line-height: 18px;
+}
+
+code {
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+
+/*Progressbar*/
+.progressbar-container{
+    background: #F1F5F9;
+    padding: 24px;
+    margin-bottom: 2.25em;
+    border-radius: 8px;
+}
+.progress.eti-progress {
+    background: none;
+}
+
+.eti-progress .progress-bar.eti-progress {
+    background-color: #047857!important;
+    height: 5px;
+}
+
+.eti-progress .progress-bar.eti-progress .shipping_status_text {
+    color: #000;
+    padding: 2vh;
+    position: absolute;
+    font-size: 1.33em;
+}
+
+.progressbar-wrapper {
+    background: transparent;
+    /* width: 100%; */
+    padding-top: 10px;
+    padding-bottom: 5px;
+    /* margin: 0 2em; */
+}
+
+ul.progressbar {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+}
+
+.progressbar li {
+    list-style-type: none;
+    width: 100%;
+    /* float: left; */
+    font-size: 1.2em;
+    position: relative;
+    /* text-align: center; */
+    text-transform:capitalize !important;
+    color: #475569 !important;
+    margin-bottom: 1em;
+    height: 120px;
+}
+
+
+/*Circles*/
+
+.progressbar li:before {
+    width: 80px;
+    height: 80px;
+    content: "";
+    line-height: 80px;
+    /* border: 2px solid #CBD5E1; */
+    display: block;
+    text-align: center;
+    /* margin: 0 auto 3px auto; */
+    border-radius: 100%;
+    position: relative;
+    z-index: 3;
+    font-size: 2em;
+    color: #CBD5E1;
+    background-color: #FFF;
+    /* margin-left: 10px; */
+    margin-bottom: 0.3em;
+    font-weight: normal !important;
+}
+
+.progressbar li:after {
+    width: 100%;
+    height: 3px;
+    content: '';
+    position: absolute;
+    background-color: #CBD5E1;
+    top: 40px;
+    left: -85%;
+    z-index: 0;
+}
+
+.progressbar li:first-child:after {
+    content: none;
+}
+
+.pb-complete:after {
+    left: -80% !important;
+    width: 170% !important;
+}
+
+.complete-progressbar {
+    background: #047857;
+    height: 3px;
+    position: absolute;
+    top: 33.5%;
+    left: -81%;
+    z-index: 2;
+}
+
+
+/*Active*/
+
+.progressbar li.active {
+    color: #047857!important;
+    font-weight: bold;
+}
+
+.progressbar li.active:before {
+    /* border-color: #CBD5E1; */
+    background: #047857;
+    color: #fff !important;
+}
+
+.progressbar li.active+li:after {
+    background-color: #047857;
+}
+
+.progressbar li.done+li:after {
+    background-color: #047857;
+}
+
+.progressbar li.done:before {
+    /* border-color: #CBD5E1; */
+    /* background: #33a522; */
+    background-color: #047857;
+    color: #fff !important;
+}
+
+.progressbar li.failed:before {
+    border-color: #CBD5E1;
+    background: #CBD5E1;
+    color: #fff !important;
+}
+
+li.pb-deliver.pb-complete.failed:before {
+    border-color: #CBD5E1;
+    background: #bb1e10 !important;
+    color: #fff !important;
+}
+
+.progressbar li.progress-active+li:after {
+    background-color: #047857;
+}
+
+
+/* li.pb-deliver.pb-complete.done:before {
+    background: #33a522 !important;
+} */
+
+.progress-active:before {
+    border-color: #CBD5E1 !important;
+    background: #047857!important;
+    color: #fff!important;
+}
+
+.progress-active:after {
+    background-color: #047857!important;
+}
+
+.pb-complete.active:after {
+    background-color: #047857!important;
+}
+
+li.pb-complete {
+    text-align: right;
+}
+
+.pb-text {
+    position: absolute;
+    bottom: 0;
+}
+
+.pb-payment.done .pb-text {
+    /* left: 10px; */
+}
+
+
+/*PB Delivery*/
+
+.complete-text {
+    right: -0.2em;
+}
+
+.pb-payment.active .pb-text {}
+
+.pb-preparation.active .pb-text {}
+
+.pb-delivery.active .pb-text {
+    left: 0em !important;
+}
+
+.pb-payment.progress-active .pb-text {
+    left: 2em !important;
+}
+
+.pb-preparation.progress-active .pb-text {
+    left: 0.5em;
+}
+
+.pb-delivery.progress-active .pb-text {
+    left: 1em;
+}
+
+li.pb-deliver.pb-preparation.active.done .pb-text {
+    left: 0.7em;
+}
+
+.pb-deliver.pb-delivery.active.done .pb-text {
+    left: 1em !important;
+}
+
+.pb-payment.active.pending .pb-text {
+    left: -1em !important;
+}
+
+.pb-deliver.pb-complete.failed .pb-text {
+    right: 0.5em !important;
+}
+
+li.pb-deliver.pb-complete.done .complete-progressbar {
+    width: 180%;
+}
+
+li.pb-deliver.pb-preparation.done .pb-text {
+    /* left: 0.5em; */
+}
+
+li.pb-deliver.pb-delivery.failed .pb-text {
+    left: 1em;
+}
+
+li.pb-deliver.pb-delivery.failed:before {
+    /* border-color: #CBD5E1; */
+    background: #047857;
+    color: #fff !important;
+}
+
+li.pb-deliver.pb-delivery.done .pb-text {
+    /* left: 40px; */
+}
+
+li.pb-deliver.pb-payment.done.refunded .pb-text,
+li.pb-pickup.pb-payment.done.refunded .pb-text {
+    left: 0.5em !important;
+}
+
+li.pb-deliver.pb-complete.failed:after {
+    background-color: #047857!important;
+}
+
+
+/*PB Pickup*/
+
+.pb-pickup.pb-preparation:before {
+    margin: 0 auto;
+}
+
+.pb-pickup.pb-complete {
+    text-align: right;
+}
+
+.pb-pickup.pb-preparaion {
+    text-align: center;
+}
+
+li.pb-pickup.pb-delivery:before {
+    float: right;
+}
+
+.pb-pickup.pb-preparation:after {
+    width: 130%;
+    left: -85%;
+}
+
+li.pb-pickup.pb-delivery .pb-text {
+    text-align: right;
+    right: 0;
+}
+
+li.pb-pickup.pb-preparation .pb-text {
+    text-align: center;
+    left: 0;
+    right: 0;
+}
+
+.pb-pickup.pb-delivery:after {
+    left: -45% !important;
+    width: 130% !important;
+}
+
+.pb-pickup.progress-active .payment-text {
+    left: 2em !important;
+}
+
+.pb-pickup.active .payment-text {
+    left: -0.2em;
+}
+
+.pb-pickup.pb-preparation .pb-text {
+    left: 0;
+    right: 0;
+}
+
+.progressbar .pb-pickup.active+li:after {
+    background-color: #047857!important;
+}
+
+.pb-pickup.pb-preparation:before {
+    font-family: FontAwesome;
+    content: "\f1b2" !important;
+}
+
+.pb-pickup.pb-delivery:before {
+    font-family: FontAwesome;
+    content: "\f058" !important;
+}
+
+
+/* li.pb-pickup.pb-delivery.done:before {
+    background: #33a522 !important;
+} */
+
+
+/* li.pb-deliver.pb-payment.done:before,
+li.pb-deliver.pb-preparation.done:before,
+li.pb-deliver.pb-delivery.done:before,
+li.pb-pickup.pb-delivery.done:before {
+    background: #33a522;
+} */
+
+li.pb-pickup.pb-delivery.failed:before {
+    content: "\f057" !important;
+    background: #047857;
+}
+
+li.pb-pickup.pb-delivery.failed .pb-text {
+    right: 0.5em !important;
+}
+
+
+/*DELIVERY ICONS*/
+
+.pb-payment:before {
+    font-family: FontAwesome;
+    content: "\f3d1" !important;
+}
+
+.pb-preparation:before {
+    font-family: FontAwesome;
+    content: "\f1b2" !important;
+}
+
+.pb-delivery:before {
+    font-family: FontAwesome;
+    content: "\f0d1" !important;
+    /* margin-left: 40px !important; */
+}
+
+.pb-complete:before {
+    font-family: FontAwesome;
+    content: "\f058" !important;
+    float: right;
+}
+
+.pb-deliver.pb-complete.failed:before {
+    font-family: FontAwesome;
+    content: "\f057" !important;
+}
+
+.pb-deliver.pb-payment.cancelled:before {
+    font-family: FontAwesome;
+    content: "\f06a" !important;
+}
+
+.pb-complete:after {
+    background-color: #CBD5E1 !important;
+}
+
+.pb-deliver.pb-preparation.cancelled:after {
+    background-color: #CBD5E1;
+}
+
+.pb-complete.done .pb-text {
+    right: 0;
+}
+
+
+/*Duration and ETA*/
+
+table.duration-table,
+table.duration-table thead th {
+    text-align: center;
+}
+
+table.duration-table thead {
+    background-color: #047857!important;
+}
+
+table.duration-table thead th {
+    font-size: 1.5em;
+    color: #fff;
+}
+
+table.duration-table tbody td {
+    font-size: 1.7em;
+    font-weight: 700;
+}
+
+
+/*Trackorder link*/
+
+.trackorder-link {
+    margin-bottom: 1em!important;
+    float: right;
+    margin-right: 0;
+    padding: 1em!important;
+    font-size: 1em !important;
+    font-weight: 700 !important;
+}
+
+
+/*Extra*/
+
+.hide-element {
+    display: none;
+}
+
+.woocommerce .woocommerce-MyAccount-content a.button {
+    margin-bottom: 0.5em !important;
+}
+
+.track-order-form-control{
+    position: relative;
+}
+
+.track-order-form-control:not(:last-child) {
+    margin-bottom: 16px;
+}
+
+.track-order-form-control:last-child {
+    margin-top: 20px;
+}
+.track-order-form-control label {
+    font-weight: 600;
+}
+.track-order-form-control .form-control {
+    background: #FFF;
+    border: 1px solid #CBD5E1;
+    padding: 12px 24px;
+    border-radius: 8px;
+}
+#track_order_submit {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content !important;
+}
+.field-container .field-icon {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    display: none;
+}
+
+#track_order_num {
+    background: #FFFFFF;
+    border: 1px solid #CBD5E1;
+    border-radius: 8px;
+    padding: 12px 24px;
+    width: 100%;
+}
+.form-box #track_order_num.error {
+    border-color: #D92D20 !important;
+}
+form label.error {
+    margin-top: 8px;
+    color: #D92D20 !important;
+    font-weight: normal !important;
+}
+.field-label {
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+.trackorder-error{
+    display: inline;
+}
+#track-order-form-container .progressbar-container {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+#tracking-page-container {
+    
+    background: #F1F5F9;
+    padding: 36px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 36px;
+}
+#tracking-page-details {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+#tracking-page-details-header {
+    border-bottom: 1px solid var(--neutral-300, #CBD5E1);
+    padding: 10px 0px;
+}
+#tracking-page-details-subheader {
+    font-family: 'P22MackinacPro';
+    font-size: 1.25em;
+}
+a.btn-green-reverse {
+    border: 2px solid #047857;
+    border-radius: 100px;
+    padding: 16px 28px;
+    font-family: 'P22MackinacPro';
+    text-align: center;
+    font-size: 24px;
+    color: #047857 !important;
+    font-weight: 800 !important;
+}
+#track-order-form-container .progressbar_title {
+    margin-bottom: 16px !important;
+}
+#track-order-form-container  .progressbar-wrapper{
+    padding: 0;
+}
+#tracking-page-container .progressbar,
+#tracking-page-container .progressbar li {
+    margin-bottom: 0;
+}
+#tracking-page-details-subheader strong {
+    font-weight: 800 !important;
+    font-family: "P22MackinacPro Bold" !important;
+}
+
+
+@media(min-width: 320px) and (max-width: 480px) {
+    ul.progressbar{
+        
+        justify-content: space-between;
+    }
+    .progressbar li:before{
+        
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        line-height: 35px;
+    }
+    .progressbar li:after,.complete-progressbar{
+        display: none;
+    }
+    .progressbar li{
+        height: 90px !important;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+    }
+    .pb-text {
+        position: relative;
+        font-size: 12px;
+    }
+    #track_order_submit {
+        width: 100%;
+    }
+    a.btn-green-reverse {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+@media(min-width: 481px) and (max-width: 680px) {
+    #track_order_submit {
+        width: 100%;
+    }
+    a.btn-green-reverse {
+        font-size: 16px;
+        width: 100%;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+@media(min-width: 481px) and (max-width: 767px) {
+    ul.progressbar{
+        
+        justify-content: space-between;
+    }
+    .progressbar li:before{
+        
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+        line-height: 35px;
+    }
+    .progressbar li:after,.complete-progressbar{
+        display: none;
+    }
+    .progressbar li{
+        height: 90px !important;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+    }.pb-text {
+        position: relative;
+        font-size: 12px;
+    }
+}
+
+@media(min-width: 768px) and (max-width: 1024px) {
+}
